@@ -11,6 +11,10 @@ class Client {
     private BasicStreamClient $socket_connection;
     private int $protocol_version = 1;
 
+    public function __construct() {
+        $this->socket_connection = new BasicStreamClient();
+    }
+
     private function errorHandler($args) {
 
     }
@@ -34,6 +38,7 @@ class Client {
     }
 
     public function setup(array $config) : void {
+
         $this->socket_connection->setup($config);
     }
 
