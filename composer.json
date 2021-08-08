@@ -1,0 +1,40 @@
+{
+  "name": "ztk/fafgear",
+  "version": "0.1.0",
+  "description": "Communicate with MysqlGeard",
+  "type": "library",
+  "repositories": [
+    {
+      "type":"package",
+      "package": {
+        "name": "cztk/php-socket",
+        "version":"0.1.0",
+        "source": {
+          "url": "https://github.com/cztk/php-socket.git",
+          "type": "git",
+          "reference": "0.1.0"
+        }
+      }
+    }
+  ],
+  "require": {
+    "php": ">=7.4.0",
+    "cztk/php-socket": "0.1.0"
+  },
+  "require-dev": {
+
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Christoph Zysik",
+      "email": "support@ztk.me"
+    }
+  ],
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-0": {
+      "\\ztk\\FafGear": "src/"
+    }
+  }
+}
