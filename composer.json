@@ -8,18 +8,18 @@
       "type":"package",
       "package": {
         "name": "cztk/php-socket",
-        "version":"0.1.0",
+        "version":"0.1.1",
         "source": {
           "url": "https://github.com/cztk/php-socket.git",
           "type": "git",
-          "reference": "0.1.0"
+          "reference": "0.1.1"
         }
       }
     }
   ],
   "require": {
     "php": ">=7.4.0",
-    "cztk/php-socket": "0.1.0"
+    "cztk/php-socket": "0.1.1"
   },
   "require-dev": {
 
