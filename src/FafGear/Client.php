@@ -57,7 +57,7 @@ class Client {
     }
 
     public function connect() : bool {
-        $this->connect_socket();
+        return $this->connect_socket();
     }
 
     public function disconnect(): void {
