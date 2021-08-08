@@ -47,9 +47,11 @@ class Client {
 
         $connect_result = $this->socket_connection->connect();
         if($connect_result) {
+            $this->isConnected = true;
             $header = pack("c", $this->protocol_version);
-            if($this->send($header))  {
-                $this->isConnected = true;
+            if(!$this->send($header))  {
+                $this->isConnected = false;
+                $this->disconnect();
             }
         }
 
