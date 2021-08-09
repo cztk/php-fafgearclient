@@ -52,6 +52,12 @@ class Client {
             if(!$this->send($header))  {
                 $this->isConnected = false;
                 $this->disconnect();
+            } else {
+                $protoAcceptedReq = $this->read(1);
+                if(!$protoAcceptedReq['read'] || '0' == $protoAcceptedReq['data']) {
+                    $this->isConnected = false;
+                    $this->disconnect();
+                }
             }
         }
 
